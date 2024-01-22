@@ -1,0 +1,169 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: aqua;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+}
+
+
+#main{
+    width:400px;
+    height: 500px;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border-radius: 20px;
+}
+
+.title{
+  
+ 
+    
+}
+
+.input{
+    width: 80%;
+   
+   
+    height: 50px;
+}
+
+
+.form{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    
+}
+
+.submit{
+    width: 80%;
+    height: 50px;
+    background-color: brown;
+    color: white;
+    cursor: pointer;
+ font-family: 'Courier New', Courier, monospace;
+
+ font-size: large;
+    border-radius: 10px;
+     margin: 10px;
+ display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+ 
+
+}
+
+.formheading{
+    align-items: center;
+    text-align: center;
+
+    margin-top: 10px;
+}
+
+.header{
+    width: 100vw;
+    height: 80px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+}
+
+.logo{
+margin-left: 20px;
+ border-radius: 10px;
+
+}
+.text{
+    color: white;
+    /* width: 80%;
+    display: flex;
+    text-align: center;
+    justify-content: center; */
+
+    margin: 50px;
+
+    font-weight: bolder;
+    font-size: xx-large;
+}
+
+
+
+
+.delete{
+   align-items: center;
+margin: auto;
+text-align: center;
+background-color: green;
+width: 80%;
+border-radius: 10px;
+margin-top: 20px;
+margin-bottom: 20px;
+padding: 10px;
+color: rgb(94, 6, 15);
+display: none;
+}
+
+
+
+@media screen and (max-width:500px) {
+  
+    
+#main{
+    width:100%;
+   
+}
+
+.delete{
+    font-size: large;
+}
+    
+}
+
+
+@media screen and (max-width:600px) {
+  
+    
+   .header{
+    justify-content: space-around
+   }
+
+   .logo{
+    margin: 0;
+   }
+
+   .text{
+    color: white;
+    /* width: 80%;
+    display: flex;
+    text-align: center;
+    justify-content: center; */
+
+    margin: 0px;
+    font-size: large;
+}
+
+
+.delete{
+    font-size:x-large;
+}
+    
+        
+    }
